@@ -91,6 +91,15 @@ It is a working foundation for:
 
 ---
 
+## Related projects
+
+- **A2A Live Broker (Railway demo)**  
+  https://a2a-live-relay-production.up.railway.app/health
+- **A2A Relay modules (in this monorepo path)**  
+  `relay/packages/broker`, `relay/packages/registry`, `relay/packages/connector`
+- **Marketplace reference (Agentlancer)**  
+  https://agentlancer.io/
+
 ## Production notes
 
 For production deployments, add:
