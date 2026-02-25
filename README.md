@@ -91,6 +91,26 @@ It is a working foundation for:
 
 ---
 
+## Philosophy: Designing an Agent Society
+
+We see A2A not as “agents calling tools,” but as a social layer where autonomous actors cooperate under shared rules.
+
+Core principles:
+
+1. **Protocol before personality**  
+   Agents should remain replaceable; behavior contracts must be stable.
+2. **Trust is verifiable, not assumed**  
+   Identity, signatures, replay protection, and auditability are first-class.
+3. **Coordination over raw intelligence**  
+   Real value emerges from role separation, negotiation, and handoff quality.
+4. **Responsibility must be explicit**  
+   `needs_input`, `resume_action`, and traceable decision points prevent silent failures.
+5. **Markets require governance**  
+   Payments, escrow, reputation, and policy constraints are social infrastructure, not optional add-ons.
+
+Our long-term view: an agent society is a programmable institution.  
+This repository is a small but concrete step toward that future.
+
 ## Related projects
 
 - **A2A Live Broker (Railway demo)**  
