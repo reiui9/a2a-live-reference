@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A2A-Live Envelope",
+  "type": "object",
+  "required": ["id", "type", "from", "payload", "ts", "key_id", "sig"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "from": { "type": "string" },
+    "to": { "type": "string" },
+    "task_id": { "type": "string" },
+    "payload": {},
+    "ts": { "type": "integer" }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "a2a-live-relay",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:broker": "npm --workspace @a2a-live/broker run dev",
+    "dev:registry": "npm --workspace @a2a-live/registry run dev",
+    "dev:connector": "npm --workspace @a2a-live/connector run dev",
+    "start": "npm --workspace @a2a-live/broker run start",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run build --workspaces --if-present && tsx --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

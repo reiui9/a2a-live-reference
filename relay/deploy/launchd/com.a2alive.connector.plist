@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.a2alive.connector</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/env</string>
+      <string>node</string>
+      <string>/ABSOLUTE/PATH/TO/relay/packages/connector/dist/index.js</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>A2A_AGENT_ID</key><string>agent://granterbot.main</string>
+      <key>A2A_BROKER_WS_URL</key><string>wss://a2a-live-relay-production.up.railway.app/a2a-live</string>
+      <key>A2A_BROKER_SECRET</key><string>change_me</string>
+      <key>A2A_KEY_ID</key><string>default</string>
+    </dict>
+    <key>RunAtLoad</key><true/>
+    <key>KeepAlive</key><true/>
+    <key>StandardOutPath</key><string>/tmp/a2alive-connector.log</string>
+    <key>StandardErrorPath</key><string>/tmp/a2alive-connector.err.log</string>
+  </dict>
+</plist>

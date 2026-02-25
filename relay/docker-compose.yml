@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: a2alive
+    ports: ["5432:5432"]
+  registry:
+    build: ./packages/registry
+    environment:
+      REGISTRY_PORT: 8081
+      REGISTRY_API_KEY: dev_registry_key
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/a2alive
+    ports: ["8081:8081"]
+    depends_on: [postgres]
+  broker:
+    build: ./packages/broker
+    environment:
+      PORT: 8080
+      REDIS_URL: redis://redis:6379
+      REGISTRY_BASE_URL: http://registry:8081
+      BROKER_SHARED_SECRET: change_me
+    ports: ["8080:8080"]
+    depends_on: [redis, registry]

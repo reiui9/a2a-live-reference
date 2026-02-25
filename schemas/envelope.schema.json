@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://granter.ai/schemas/a2a-live-envelope.json",
+  "title": "A2A-Live Envelope",
+  "type": "object",
+  "required": ["envelope", "payload"],
+  "properties": {
+    "envelope": {
+      "type": "object",
+      "required": ["id", "sessionId", "threadId", "type", "from", "to", "timestamp", "ttl"],
+      "properties": {
+        "id": { "type": "string" },
+        "sessionId": { "type": "string" },
+        "threadId": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["negotiate", "negotiate_response", "message", "stream_start", "stream_chunk", "stream_end", "ack", "error", "control"]
+        },
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "replyTo": { "type": ["string", "null"] },
+        "ttl": { "type": "number", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "payload": { "type": ["object", "array", "string", "number", "boolean", "null"] },
+    "signature": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

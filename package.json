@@ -1,0 +1,17 @@
+{
+  "name": "a2a-live-reference",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "A2A-Live reference implementation (draft)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "client": "node examples/initiator.mjs",
+    "check": "node src/selfcheck.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
